@@ -8,7 +8,7 @@ use TomasVotruba\Laravelize\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRo
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->removeUnusedImports();
 
-    $rectorConfig->import(__DIR__ . '/../../../../../config/rector_services.php');
+    $rectorConfig->import(__DIR__ . '/../../../../../config/rector/services.php');
 
     $rectorConfig->ruleWithConfiguration(SymfonyRouteAttributesToLaravelRouteFileRector::class, [
         SymfonyRouteAttributesToLaravelRouteFileRector::ROUTES_FILE_PATH => __DIR__ . '/dumped_routes.php',

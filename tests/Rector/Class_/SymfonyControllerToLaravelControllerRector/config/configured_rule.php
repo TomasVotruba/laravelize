@@ -8,7 +8,7 @@ use TomasVotruba\Laravelize\Rector\Class_\SymfonyControllerToLaravelControllerRe
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->removeUnusedImports();
 
-    $rectorConfig->import(__DIR__ . '/../../../../../config/rector_services.php');
+    $rectorConfig->import(__DIR__ . '/../../../../../config/rector/services.php');
 
     $rectorConfig->rule(SymfonyControllerToLaravelControllerRector::class);
 };
