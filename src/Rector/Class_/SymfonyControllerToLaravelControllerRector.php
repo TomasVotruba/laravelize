@@ -47,7 +47,6 @@ final class SymfonyControllerToLaravelControllerRector extends AbstractRector
             return null;
         }
 
-
         $node->extends = new FullyQualified('Illuminate\Routing\Controller');
 
         foreach ($node->getMethods() as $classMethod) {

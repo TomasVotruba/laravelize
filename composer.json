@@ -17,7 +17,6 @@
     },
     "require": {
         "nikic/php-parser": "^4.15",
-        "illuminate/console": "^10.4",
         "webmozart/assert": "^1.11",
         "nette/utils": "^4.0",
         "sebastian/diff": "^5.0",
