@@ -8,5 +8,7 @@ use TomasVotruba\Laravelize\Rector\Class_\SymfonyCommandToLaravelCommandRector;
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->import(__DIR__ . '/../../../../../config/rector_services.php');
 
+    $rectorConfig->removeUnusedImports();
+
     $rectorConfig->rule(SymfonyCommandToLaravelCommandRector::class);
 };

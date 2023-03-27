@@ -22,12 +22,9 @@ final class SymfonyControllerToLaravelControllerRector extends AbstractRector
 {
     public function getRuleDefinition(): RuleDefinition
     {
-        return new RuleDefinition(
-            'Convert Symfony controller to Laravel one',
-            [
-                // ...
-            ]
-        );
+        return new RuleDefinition('Convert Symfony controller to Laravel one', [
+            // ...
+        ]);
     }
 
     /**
@@ -49,6 +46,7 @@ final class SymfonyControllerToLaravelControllerRector extends AbstractRector
         )) {
             return null;
         }
+
 
         $node->extends = new FullyQualified('Illuminate\Routing\Controller');
 

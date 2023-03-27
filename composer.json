@@ -10,7 +10,10 @@
     "autoload-dev": {
         "psr-4": {
             "TomasVotruba\\Laravelize\\Tests\\": "tests"
-        }
+        },
+        "classmap": [
+            "stubs"
+        ]
     },
     "require": {
         "nikic/php-parser": "^4.15",
