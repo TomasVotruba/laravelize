@@ -1,6 +1,6 @@
 <?php
 
-namespace TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyControllerToLaravelControllerRector\Fixture;
+namespace TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyControllerToLaravelControllerRector\Fixture;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,7 +19,7 @@ final class SomeController extends AbstractController
 -----
 <?php
 
-namespace TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyControllerToLaravelControllerRector\Fixture;
+namespace TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyControllerToLaravelControllerRector\Fixture;
 
 final class SomeController extends \Illuminate\Routing\Controller
 {

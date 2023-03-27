@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyCommandToLaravelCommandRector;
+namespace TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyCommandToLaravelCommandRector;
 
 use Iterator;
 use PHPUnit\Framework\Attributes\DataProvider;

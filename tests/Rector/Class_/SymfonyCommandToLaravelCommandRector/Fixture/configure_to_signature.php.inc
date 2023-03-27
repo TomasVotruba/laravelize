@@ -1,6 +1,6 @@
 <?php
 
-namespace TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyCommandToLaravelCommandRector\Fixture;
+namespace TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyCommandToLaravelCommandRector\Fixture;
 
 use Symfony\Component\Console\Command\Command;
 
@@ -19,7 +19,7 @@ final class ConfigureToSignature extends Command
 -----
 <?php
 
-namespace TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyCommandToLaravelCommandRector\Fixture;
+namespace TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyCommandToLaravelCommandRector\Fixture;
 
 final class ConfigureToSignature extends \Illuminate\Console\Command
 {

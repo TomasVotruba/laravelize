@@ -16,7 +16,7 @@ use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 use TomasVotruba\Laravelize\NodeFactory\SignaturePropertyFactory;
 
 /**
- * @see \TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyCommandToLaravelCommandRector\SymfonyControllerToLaravelControllerRectorTest
+ * @see \TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyCommandToLaravelCommandRector\SymfonyControllerToLaravelControllerRectorTest
  */
 final class SymfonyCommandToLaravelCommandRector extends AbstractRector
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyControllerToLaravelControllerRector;
+namespace TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyControllerToLaravelControllerRector;
 
 use Iterator;
 use PHPUnit\Framework\Attributes\DataProvider;

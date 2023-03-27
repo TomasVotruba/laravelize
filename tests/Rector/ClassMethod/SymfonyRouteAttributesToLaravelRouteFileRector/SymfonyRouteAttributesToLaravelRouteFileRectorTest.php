@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Laravelize\Tests\Rector\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRouteFileRector;
+namespace TomasVotruba\Laravelize\Tests\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRouteFileRector;
 
 use Nette\Utils\FileSystem;
 use Rector\Testing\PHPUnit\AbstractRectorTestCase;

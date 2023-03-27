@@ -12,6 +12,11 @@ return function (ECSConfig $ecsConfig): void {
         __DIR__ . '/tests',
     ]);
 
+    $ecsConfig->skip([
+        '*/Expected/*',
+        '*/Fixture/*',
+    ]);
+
     $ecsConfig->sets([
          SetList::COMMON,
          SetList::PSR_12,

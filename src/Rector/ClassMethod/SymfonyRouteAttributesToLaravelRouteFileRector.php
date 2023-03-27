@@ -23,7 +23,7 @@ use TomasVotruba\Laravelize\NodeFactory\RouteGetCallFactory;
 use Webmozart\Assert\Assert;
 
 /**
- * @see \TomasVotruba\Laravelize\Tests\Rector\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRouteFileRector\SymfonyRouteAttributesToLaravelRouteFileRectorTest
+ * @see \TomasVotruba\Laravelize\Tests\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRouteFileRector\SymfonyRouteAttributesToLaravelRouteFileRectorTest
  */
 final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRector implements ConfigurableRectorInterface
 {

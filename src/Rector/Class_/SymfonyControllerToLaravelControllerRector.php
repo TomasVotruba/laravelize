@@ -16,7 +16,7 @@ use Rector\Core\Rector\AbstractRector;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 
 /**
- * @see \TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyControllerToLaravelControllerRector\SymfonyControllerToLaravelControllerRectorTest
+ * @see \TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyControllerToLaravelControllerRector\SymfonyControllerToLaravelControllerRectorTest
  */
 final class SymfonyControllerToLaravelControllerRector extends AbstractRector
 {

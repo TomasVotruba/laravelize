@@ -1,6 +1,6 @@
 <?php
 
-namespace TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyCommandToLaravelCommandRector\Fixture;
+namespace TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyCommandToLaravelCommandRector\Fixture;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -20,7 +20,7 @@ final class SomeCommand extends Command
 -----
 <?php
 
-namespace TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyCommandToLaravelCommandRector\Fixture;
+namespace TomasVotruba\Laravelize\Tests\Rector\Class_\SymfonyCommandToLaravelCommandRector\Fixture;
 
 final class SomeCommand extends \Illuminate\Console\Command
 {
