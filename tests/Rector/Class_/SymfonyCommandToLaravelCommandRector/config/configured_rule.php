@@ -6,9 +6,7 @@ use Rector\Config\RectorConfig;
 use TomasVotruba\Laravelize\Rector\Class_\SymfonyCommandToLaravelCommandRector;
 
 return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->removeUnusedImports();
-
-    $rectorConfig->import(__DIR__ . '/../../../../../../utils/config/rector_services.php');
+    $rectorConfig->import(__DIR__ . '/../../../../../config/rector_services.php');
 
     $rectorConfig->rule(SymfonyCommandToLaravelCommandRector::class);
 };
