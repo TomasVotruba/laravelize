@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace TomasVotruba\Laravelize\Tests\Rector\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRouteFileRector\Fixture;
 
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,3 +12,5 @@ class SomeController
         $this->someMethod();
     }
 }
+
+?>
