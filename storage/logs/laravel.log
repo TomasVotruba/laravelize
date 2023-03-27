@@ -1,0 +1,85 @@
+[2023-03-27 19:58:27] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:212)
+[stacktrace]
+#0 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(137): Illuminate\\Log\\LogManager->resolve()
+#1 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(124): Illuminate\\Log\\LogManager->get()
+#2 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(667): Illuminate\\Log\\LogManager->driver()
+#3 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\\Log\\LogManager->error()
+#4 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(503): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#5 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(202): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#6 /var/www/laravelize/bin/laravelize.php(24): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 {main}
+"} 
+[2023-03-27 19:58:27] laravel.ERROR: Unable to load the "app" configuration file. {"exception":"[object] (Exception(code: 0): Unable to load the \"app\" configuration file. at /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:66)
+[stacktrace]
+#0 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#1 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#2 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(428): Illuminate\\Foundation\\Application->bootstrapWith()
+#3 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 /var/www/laravelize/bin/laravelize.php(24): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
+[2023-03-27 19:58:29] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:212)
+[stacktrace]
+#0 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(137): Illuminate\\Log\\LogManager->resolve()
+#1 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(124): Illuminate\\Log\\LogManager->get()
+#2 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(667): Illuminate\\Log\\LogManager->driver()
+#3 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\\Log\\LogManager->error()
+#4 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(503): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#5 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(202): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#6 /var/www/laravelize/bin/laravelize.php(24): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 {main}
+"} 
+[2023-03-27 19:58:29] laravel.ERROR: Unable to load the "app" configuration file. {"exception":"[object] (Exception(code: 0): Unable to load the \"app\" configuration file. at /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:66)
+[stacktrace]
+#0 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#1 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#2 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(428): Illuminate\\Foundation\\Application->bootstrapWith()
+#3 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 /var/www/laravelize/bin/laravelize.php(24): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
+[2023-03-27 20:00:12] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:212)
+[stacktrace]
+#0 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(137): Illuminate\\Log\\LogManager->resolve()
+#1 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(124): Illuminate\\Log\\LogManager->get()
+#2 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(667): Illuminate\\Log\\LogManager->driver()
+#3 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(274): Illuminate\\Log\\LogManager->error()
+#4 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(503): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#5 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(202): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#6 /var/www/laravelize/bin/laravelize.php(24): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 {main}
+"} 
+[2023-03-27 20:00:12] laravel.ERROR: Unable to load the "app" configuration file. {"exception":"[object] (Exception(code: 0): Unable to load the \"app\" configuration file. at /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:66)
+[stacktrace]
+#0 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#1 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#2 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(428): Illuminate\\Foundation\\Application->bootstrapWith()
+#3 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 /var/www/laravelize/bin/laravelize.php(24): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
+[2023-03-27 20:00:39] production.ERROR: The /var/www/laravelize/bootstrap/cache directory must be present and writable. {"exception":"[object] (Exception(code: 0): The /var/www/laravelize/bootstrap/cache directory must be present and writable. at /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php:178)
+[stacktrace]
+#0 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(131): Illuminate\\Foundation\\PackageManifest->write()
+#1 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(107): Illuminate\\Foundation\\PackageManifest->build()
+#2 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(90): Illuminate\\Foundation\\PackageManifest->getManifest()
+#3 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(79): Illuminate\\Foundation\\PackageManifest->config()
+#4 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#5 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap()
+#6 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(428): Illuminate\\Foundation\\Application->bootstrapWith()
+#7 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#8 /var/www/laravelize/bin/laravelize.php(24): Illuminate\\Foundation\\Console\\Kernel->handle()
+#9 {main}
+"} 
+[2023-03-27 20:03:33] production.ERROR: Class "App\Providers\RouteServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"App\\Providers\\RouteServiceProvider\" not found at /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:206)
+[stacktrace]
+#0 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(142): Illuminate\\Foundation\\ProviderRepository->createProvider()
+#1 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest()
+#2 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(741): Illuminate\\Foundation\\ProviderRepository->load()
+#3 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(261): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap()
+#5 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(428): Illuminate\\Foundation\\Application->bootstrapWith()
+#6 /var/www/laravelize/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /var/www/laravelize/bin/laravelize.php(24): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 

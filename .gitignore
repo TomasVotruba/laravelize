@@ -5,3 +5,5 @@ composer.lock
 
 # phpunit
 .phpunit.cache
+
+/bootstrap/cache
