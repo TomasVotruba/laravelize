@@ -18,8 +18,8 @@ use Rector\Core\PhpParser\Printer\BetterStandardPrinter;
 use Rector\Core\Rector\AbstractRector;
 use Rector\FileSystemRector\ValueObject\AddedFileWithContent;
 use Rector\NodeTypeResolver\Node\AttributeKey;
-use TomasVotruba\Laravelize\NodeFactory\RouteGetCallFactory;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
+use TomasVotruba\Laravelize\NodeFactory\RouteGetCallFactory;
 use Webmozart\Assert\Assert;
 
 /**

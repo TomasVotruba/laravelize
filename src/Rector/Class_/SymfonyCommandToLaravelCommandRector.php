@@ -12,8 +12,8 @@ use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassMethod;
 use PHPStan\Type\ObjectType;
 use Rector\Core\Rector\AbstractRector;
-use TomasVotruba\Laravelize\NodeFactory\SignaturePropertyFactory;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
+use TomasVotruba\Laravelize\NodeFactory\SignaturePropertyFactory;
 
 /**
  * @see \TomasVotruba\Laravelize\Tests\Rector\Rector\Class_\SymfonyCommandToLaravelCommandRector\SymfonyControllerToLaravelControllerRectorTest

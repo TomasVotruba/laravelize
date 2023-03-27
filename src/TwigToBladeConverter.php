@@ -6,10 +6,10 @@ namespace TomasVotruba\Laravelize;
 
 use Illuminate\Console\OutputStyle;
 use Nette\Utils\FileSystem;
-use TomasVotruba\Laravelize\Console\Output\ColorConsoleDiffFormatter;
-use TomasVotruba\Laravelize\FileSystem\TwigFileFinder;
 use SebastianBergmann\Diff\Differ;
 use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
+use TomasVotruba\Laravelize\Console\Output\ColorConsoleDiffFormatter;
+use TomasVotruba\Laravelize\FileSystem\TwigFileFinder;
 
 /**
  * @see \TomasVotruba\Laravelize\Tests\Laravelize\TwigToBladeConverter\TwigToBladeConverterTest
