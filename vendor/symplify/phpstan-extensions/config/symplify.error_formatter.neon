@@ -1,0 +1,3 @@
+services:
+    errorFormatter.symplify:
+        class: 'Symplify\PHPStanExtensions\ErrorFormatter\SymplifyErrorFormatter'

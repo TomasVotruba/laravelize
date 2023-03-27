@@ -1,0 +1,18 @@
+parameters:
+    reportUnmatchedIgnoredErrors: false
+
+    paths:
+        - src
+        - tests
+
+    level: 8
+
+    # ignore paths
+    excludePaths:
+        - */Fixture/*
+        - */Expected/*
+
+    ignoreErrors:
+        -
+            message: '#Anonymous function should return string but returns string\|false#'
+            path: src/FileSystem/TwigFileFinder.php
