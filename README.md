@@ -1,4 +1,4 @@
-# Laravelize - Toolkit to help with your Symfony to Laravel migration
+# Laravelize - Make Symfony to Laravel migration faster and easier
 
 ## Install
 
