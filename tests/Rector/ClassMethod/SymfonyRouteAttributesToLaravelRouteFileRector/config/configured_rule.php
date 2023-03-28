@@ -10,7 +10,5 @@ return static function (RectorConfig $rectorConfig): void {
 
     $rectorConfig->import(__DIR__ . '/../../../../../config/rector/services.php');
 
-    $rectorConfig->ruleWithConfiguration(SymfonyRouteAttributesToLaravelRouteFileRector::class, [
-        SymfonyRouteAttributesToLaravelRouteFileRector::ROUTES_FILE_PATH => __DIR__ . '/dumped_routes.php',
-    ]);
+    $rectorConfig->rule(SymfonyRouteAttributesToLaravelRouteFileRector::class);
 };
