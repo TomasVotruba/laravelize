@@ -101,8 +101,10 @@ final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRecto
         $this->routesFilePath = $configuration['routes_file_path'];
     }
 
-    private function resolveRouteMetadata(Attribute $attribute, ClassMethod $classMethod): \TomasVotruba\Laravelize\ValueObject\RouteMetadata
-    {
+    private function resolveRouteMetadata(
+        Attribute $attribute,
+        ClassMethod $classMethod
+    ): \TomasVotruba\Laravelize\ValueObject\RouteMetadata {
         $routePath = $this->resolveRoutePath($attribute);
 
         $routeName = null;
@@ -121,7 +123,12 @@ final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRecto
         }
 
         $routeTarget = $this->resolveRouteTaret($classMethod);
-        return new \TomasVotruba\Laravelize\ValueObject\RouteMetadata($routePath, $routeTarget, $routeName, $routeRequirements);
+        return new \TomasVotruba\Laravelize\ValueObject\RouteMetadata(
+            $routePath,
+            $routeTarget,
+            $routeName,
+            $routeRequirements
+        );
     }
 
     private function resolveRouteTaret(ClassMethod $classMethod): string

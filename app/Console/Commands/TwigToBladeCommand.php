@@ -7,8 +7,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use TomasVotruba\Laravelize\TwigToBladeConverter;
 
-final class
-TwigToBladeCommand extends Command
+final class TwigToBladeCommand extends Command
 {
     /**
      * @api used by parent command

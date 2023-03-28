@@ -17,6 +17,10 @@ return function (ECSConfig $ecsConfig): void {
         '*/Fixture/*',
     ]);
 
+    $ecsConfig->rules([
+        \Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer::class,
+    ]);
+
     $ecsConfig->sets([
          SetList::COMMON,
          SetList::PSR_12,
