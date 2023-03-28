@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Laravelize\Tests\Laravelize\TwigToBladeConverter;
+namespace TomasVotruba\Laravelize\Tests\TwigToBladeConverter;
 
 use Illuminate\Container\Container;
 use Iterator;

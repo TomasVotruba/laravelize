@@ -12,7 +12,7 @@ use TomasVotruba\Laravelize\Console\Output\ColorConsoleDiffFormatter;
 use TomasVotruba\Laravelize\FileSystem\TwigFileFinder;
 
 /**
- * @see \TomasVotruba\Laravelize\Tests\Laravelize\TwigToBladeConverter\TwigToBladeConverterTest
+ * @see \TomasVotruba\Laravelize\Tests\TwigToBladeConverter\TwigToBladeConverterTest
  */
 final class TwigToBladeConverter
 {
