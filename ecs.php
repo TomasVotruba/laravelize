@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
@@ -18,7 +19,7 @@ return function (ECSConfig $ecsConfig): void {
     ]);
 
     $ecsConfig->rules([
-        \Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer::class,
+        LineLengthFixer::class,
     ]);
 
     $ecsConfig->sets([

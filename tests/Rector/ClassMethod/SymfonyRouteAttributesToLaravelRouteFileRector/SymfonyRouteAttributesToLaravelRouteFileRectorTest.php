@@ -12,7 +12,7 @@ final class SymfonyRouteAttributesToLaravelRouteFileRectorTest extends AbstractR
     protected function tearDown(): void
     {
         // clear routes
-        FileSystem::delete(__DIR__ . '/config/dumped_routes.php');
+        FileSystem::delete(getcwd() . '/routes/web.php');
     }
 
     public function test(): void
@@ -20,7 +20,7 @@ final class SymfonyRouteAttributesToLaravelRouteFileRectorTest extends AbstractR
         $this->doTestFile(__DIR__ . '/Fixture/some_controller.php.inc');
 
         $this->assertFileWasAdded(
-            __DIR__ . '/config/dumped_routes.php',
+            getcwd() . '/routes/web.php',
             FileSystem::read(__DIR__ . '/Expected/expected_dumped_routes.php')
         );
     }

@@ -12,7 +12,6 @@ use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassMethod;
 use PhpParser\Node\Stmt\Expression;
 use Rector\Core\Application\FileSystem\RemovedAndAddedFilesCollector;
-use Rector\Core\Contract\Rector\ConfigurableRectorInterface;
 use Rector\Core\Exception\ShouldNotHappenException;
 use Rector\Core\PhpParser\Printer\BetterStandardPrinter;
 use Rector\Core\Rector\AbstractRector;
@@ -20,18 +19,14 @@ use Rector\FileSystemRector\ValueObject\AddedFileWithContent;
 use Rector\NodeTypeResolver\Node\AttributeKey;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 use TomasVotruba\Laravelize\NodeFactory\RouteGetCallFactory;
+use TomasVotruba\Laravelize\ValueObject\RouteMetadata;
 use Webmozart\Assert\Assert;
 
 /**
  * @see \TomasVotruba\Laravelize\Tests\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRouteFileRector\SymfonyRouteAttributesToLaravelRouteFileRectorTest
  */
-final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRector implements ConfigurableRectorInterface
+final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRector
 {
-    /**
-     * @var string
-     */
-    public const ROUTES_FILE_PATH = 'routes_file_path';
-
     private string $routesFilePath;
 
     public function __construct(
@@ -39,16 +34,14 @@ final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRecto
         private readonly RemovedAndAddedFilesCollector $removedAndAddedFilesCollector,
         private readonly RouteGetCallFactory $routeGetCallFactory,
     ) {
+        $this->routesFilePath = getcwd() . '/routes/web.php';
     }
 
     public function getRuleDefinition(): RuleDefinition
     {
-        return new RuleDefinition(
-            'Move Symfony route from attributes to static Laravel routes in routes/web.php file',
-            [
-                // ...
-            ]
-        );
+        return new RuleDefinition('Move Symfony route from attributes to static Laravel routes in routes/web.php file', [
+            // ...
+        ]);
     }
 
     /**
@@ -95,16 +88,8 @@ final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRecto
         return null;
     }
 
-    public function configure(array $configuration): void
+    private function resolveRouteMetadata(Attribute $attribute, ClassMethod $classMethod): RouteMetadata
     {
-        Assert::keyExists($configuration, 'routes_file_path');
-        $this->routesFilePath = $configuration['routes_file_path'];
-    }
-
-    private function resolveRouteMetadata(
-        Attribute $attribute,
-        ClassMethod $classMethod
-    ): \TomasVotruba\Laravelize\ValueObject\RouteMetadata {
         $routePath = $this->resolveRoutePath($attribute);
 
         $routeName = null;
@@ -123,12 +108,7 @@ final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRecto
         }
 
         $routeTarget = $this->resolveRouteTaret($classMethod);
-        return new \TomasVotruba\Laravelize\ValueObject\RouteMetadata(
-            $routePath,
-            $routeTarget,
-            $routeName,
-            $routeRequirements
-        );
+        return new RouteMetadata($routePath, $routeTarget, $routeName, $routeRequirements);
     }
 
     private function resolveRouteTaret(ClassMethod $classMethod): string
