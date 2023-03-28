@@ -6,6 +6,6 @@ composer.lock
 # phpunit
 .phpunit.cache
 
-/bootstrap/cache
+/bootstrap/cache/*
 
 /storage/*
