@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Laravelize\Console\Output;
 
-use Nette\Utils\Strings;
 use Symfony\Component\Console\Formatter\OutputFormatter;
 
 /**

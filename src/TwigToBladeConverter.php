@@ -9,7 +9,7 @@ use Nette\Utils\FileSystem;
 use SebastianBergmann\Diff\Differ;
 use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
 use TomasVotruba\Laravelize\Console\Output\ColorConsoleDiffFormatter;
-use TomasVotruba\Laravelize\FileSystem\TwigFileFinder;
+use Webmozart\Assert\Assert;
 
 /**
  * @see \TomasVotruba\Laravelize\Tests\TwigToBladeConverter\TwigToBladeConverterTest
@@ -57,17 +57,16 @@ final class TwigToBladeConverter
 
     public function __construct(
         private readonly ColorConsoleDiffFormatter $colorConsoleDiffFormatter,
-        private readonly TwigFileFinder $twigFileFinder,
     ) {
         $this->differ = new Differ(new UnifiedDiffOutputBuilder());
     }
 
-    public function run(string $templatesDirectory, OutputStyle $outputStyle): void
+    /**
+     * @param string[] $twigFilePaths
+     */
+    public function run(array $twigFilePaths, OutputStyle $outputStyle): void
     {
-        $twigFilePaths = $this->twigFileFinder->findTwigFilePaths($templatesDirectory);
-
-        $foundFilesMessage = sprintf('Found %d *.twig files', count($twigFilePaths));
-        $outputStyle->note($foundFilesMessage);
+        Assert::allString($twigFilePaths);
 
         foreach ($twigFilePaths as $twigFilePath) {
             $twigFileContents = FileSystem::read($twigFilePath);
