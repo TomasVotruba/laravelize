@@ -47,10 +47,10 @@ final class TwigToBladeCommand extends Command
         $this->info($foundFilesMessage);
 
         $isDryRun = (bool) $this->option('dry-run');
-
         $this->twigToBladeConverter->run($twigFilePaths, $this->getOutput(), $isDryRun);
 
-        $symfonyStyle->success('Templates are now converted to Blade!');
+        $successMessage = sprintf('Templates %s converted to Blade', $isDryRun ? 'would be' : 'are now');
+        $symfonyStyle->success($successMessage);
 
         return self::SUCCESS;
     }

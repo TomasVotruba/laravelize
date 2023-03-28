@@ -64,7 +64,7 @@ final class TwigToBladeConverter
     /**
      * @param string[] $twigFilePaths
      */
-    public function run(array $twigFilePaths, OutputStyle $outputStyle): void
+    public function run(array $twigFilePaths, OutputStyle $outputStyle, bool $isDryRun): void
     {
         Assert::allString($twigFilePaths);
 
@@ -81,8 +81,10 @@ final class TwigToBladeConverter
             $colorDiff = $this->colorConsoleDiffFormatter->format($diff);
             $outputStyle->writeln($colorDiff);
 
-            $bladeFilePath = substr($twigFilePath, 0, -5) . '.blade.php';
-            FileSystem::write($bladeFilePath, $bladeFileContents);
+            if ($isDryRun === false) {
+                $bladeFilePath = substr($twigFilePath, 0, -5) . '.blade.php';
+                FileSystem::write($bladeFilePath, $bladeFileContents);
+            }
         }
     }
 
