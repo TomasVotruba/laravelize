@@ -71,24 +71,24 @@ final class ColorConsoleDiffFormatter
             }
         }
 
-        $coloredLines = array_map(function (string $difFLine): string {
-            $difFLine = $this->colorizeLine($difFLine);
-            if ($difFLine === ' ') {
+        $coloredDiffLines = array_map(function (string $diffLine): string {
+            $diffLine = $this->colorizeDiffLine($diffLine);
+            if ($diffLine === ' ') {
                 return '';
             }
 
-            return $difFLine;
+            return $diffLine;
         }, $escapedDiffLines);
 
-        return sprintf($template, implode(PHP_EOL, $coloredLines));
+        return sprintf($template, implode(PHP_EOL, $coloredDiffLines));
     }
 
-    private function colorizeLine(string $contents): string
+    private function colorizeDiffLine(string $diffLine): string
     {
-        return str($contents)
-            ->replace(self::PLUS_START_REGEX, '<fg=green>$1</fg=green>')
-            ->replace(self::MINUS_START_REGEX, '<fg=red>$1</fg=red>')
-            ->replace(self::AT_START_REGEX, '<fg=cyan>$1</fg=cyan>')
+        return str($diffLine)
+            ->replaceMatches(self::PLUS_START_REGEX, '<fg=green>$1</fg=green>')
+            ->replaceMatches(self::MINUS_START_REGEX, '<fg=red>$1</fg=red>')
+            ->replaceMatches(self::AT_START_REGEX, '<fg=cyan>$1</fg=cyan>')
             ->value();
     }
 }

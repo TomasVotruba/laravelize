@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\Laravelize\FileSystem\TwigFileFinder;
 use TomasVotruba\Laravelize\TwigToBladeConverter;
 
@@ -30,6 +31,8 @@ final class TwigToBladeCommand extends Command
      */
     public function handle(): int
     {
+        $symfonyStyle = new SymfonyStyle($this->input, $this->output);
+
         /** @var string $templatesDirectory */
         $templatesDirectory = $this->argument('paths');
 
@@ -43,9 +46,11 @@ final class TwigToBladeCommand extends Command
         $foundFilesMessage = sprintf('Found %d "*.twig" files', count($twigFilePaths));
         $this->info($foundFilesMessage);
 
-        $this->twigToBladeConverter->run($twigFilePaths, $templatesDirectory, $this->getOutput());
+        $isDryRun = (bool) $this->option('dry-run');
 
-        $this->info('Templates are now converted to Blade!');
+        $this->twigToBladeConverter->run($twigFilePaths, $this->getOutput(), $isDryRun);
+
+        $symfonyStyle->success('Templates are now converted to Blade!');
 
         return self::SUCCESS;
     }
