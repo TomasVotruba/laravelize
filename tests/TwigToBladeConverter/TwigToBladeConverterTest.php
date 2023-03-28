@@ -16,6 +16,8 @@ final class TwigToBladeConverterTest extends AbstractTestCase
 
     protected function setUp(): void
     {
+        parent::setUp();
+
         $this->twigToBladeConverter = $this->make(TwigToBladeConverter::class);
     }
 
