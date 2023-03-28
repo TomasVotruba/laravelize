@@ -4,21 +4,19 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Laravelize\Tests\TwigToBladeConverter;
 
-use Illuminate\Container\Container;
 use Iterator;
 use Nette\Utils\FileSystem;
 use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\TestCase;
+use TomasVotruba\Laravelize\Tests\AbstractTestCase;
 use TomasVotruba\Laravelize\TwigToBladeConverter;
 
-final class TwigToBladeConverterTest extends TestCase
+final class TwigToBladeConverterTest extends AbstractTestCase
 {
     private TwigToBladeConverter $twigToBladeConverter;
 
     protected function setUp(): void
     {
-        $container = new Container();
-        $this->twigToBladeConverter = $container->make(TwigToBladeConverter::class);
+        $this->twigToBladeConverter = $this->make(TwigToBladeConverter::class);
     }
 
     #[DataProvider('provideData')]

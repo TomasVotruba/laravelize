@@ -20,7 +20,7 @@ jobs:
 
                     -
                         name: 'Twig to Blade command run'
-                        run: 'bin/laravelize twig-to-blade e2e templates --ansi'
+                        run: 'bin/laravelize twig-to-blade e2e/templates --ansi'
 
                     -
                         name: 'Unit Tests'
