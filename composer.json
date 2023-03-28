@@ -2,6 +2,10 @@
     "name": "tomasvotruba/laravelize",
     "license": "MIT",
     "description": "Rector rules and utils to convert Symfony project to Laravel",
+    "bin": [
+        "bin/laravelize",
+        "bin/laravelize.php"
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app",
