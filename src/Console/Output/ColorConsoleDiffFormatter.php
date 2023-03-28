@@ -57,7 +57,9 @@ final class ColorConsoleDiffFormatter
     {
         $escapedDiff = OutputFormatter::escape(rtrim($diff));
 
-        $escapedDiffLines = Strings::split($escapedDiff, self::NEWLINES_REGEX);
+        $escapedDiffLines = str($escapedDiff)
+            ->split(self::NEWLINES_REGEX)
+            ->toArray();
 
         // remove description of added + remove; obvious on diffs
         foreach ($escapedDiffLines as $key => $escapedDiffLine) {
@@ -70,33 +72,24 @@ final class ColorConsoleDiffFormatter
             }
         }
 
-        $coloredLines = array_map(function (string $string): string {
-            $string = $this->makePlusLinesGreen($string);
-            $string = $this->makeMinusLinesRed($string);
-            $string = $this->makeAtNoteCyan($string);
-
-            if ($string === ' ') {
+        $coloredLines = array_map(function (string $difFLine): string {
+            $difFLine = $this->colorizeLine($difFLine);
+            if ($difFLine === ' ') {
                 return '';
             }
 
-            return $string;
+            return $difFLine;
         }, $escapedDiffLines);
 
         return sprintf($template, implode(PHP_EOL, $coloredLines));
     }
 
-    private function makePlusLinesGreen(string $string): string
+    private function colorizeLine(string $contents): string
     {
-        return Strings::replace($string, self::PLUS_START_REGEX, '<fg=green>$1</fg=green>');
-    }
-
-    private function makeMinusLinesRed(string $string): string
-    {
-        return Strings::replace($string, self::MINUT_START_REGEX, '<fg=red>$1</fg=red>');
-    }
-
-    private function makeAtNoteCyan(string $string): string
-    {
-        return Strings::replace($string, self::AT_START_REGEX, '<fg=cyan>$1</fg=cyan>');
+        return str($contents)
+            ->replace(self::PLUS_START_REGEX, '<fg=green>$1</fg=green>')
+            ->replace(self::MINUT_START_REGEX, '<fg=red>$1</fg=red>')
+            ->replace(self::AT_START_REGEX, '<fg=cyan>$1</fg=cyan>')
+            ->value();
     }
 }

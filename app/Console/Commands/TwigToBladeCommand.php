@@ -15,7 +15,7 @@ final class TwigToBladeCommand extends Command
      * @see https://laravel.com/docs/10.x/artisan#defining-input-expectations
      * @var string
      */
-    protected $signature = 'twig-to-blade {paths}';
+    protected $signature = 'twig-to-blade {paths} {--dry-run}';
 
     public function __construct(
         private readonly TwigToBladeConverter $twigToBladeConverter
