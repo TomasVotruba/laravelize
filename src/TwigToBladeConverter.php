@@ -64,11 +64,10 @@ final class TwigToBladeConverter
 
     public function run(string $templatesDirectory, OutputStyle $outputStyle): void
     {
-        if (! file_exists($templatesDirectory)) {
-            return;
-        }
-
         $twigFilePaths = $this->twigFileFinder->findTwigFilePaths($templatesDirectory);
+
+        $foundFilesMessage = sprintf('Found %d *.twig files', count($twigFilePaths));
+        $outputStyle->note($foundFilesMessage);
 
         foreach ($twigFilePaths as $twigFilePath) {
             $twigFileContents = FileSystem::read($twigFilePath);

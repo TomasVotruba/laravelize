@@ -31,6 +31,11 @@ final class TwigToBladeCommand extends Command
         /** @var string $paths */
         $paths = $this->argument('paths');
 
+        if (! file_exists($paths)) {
+            $this->error('The "%s" directory was not found');
+            return self::FAILURE;
+        }
+
         $this->twigToBladeConverter->run($paths, $this->getOutput());
 
         $this->info('Templates are now converted to Blade!');
