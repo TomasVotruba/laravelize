@@ -23,7 +23,7 @@ final class ColorConsoleDiffFormatter
      * @var string
      * @see https://regex101.com/r/xwywpa/1
      */
-    private const MINUT_START_REGEX = '#^(\-.*)#';
+    private const MINUS_START_REGEX = '#^(\-.*)#';
 
     /**
      * @var string
@@ -88,7 +88,7 @@ final class ColorConsoleDiffFormatter
     {
         return str($contents)
             ->replace(self::PLUS_START_REGEX, '<fg=green>$1</fg=green>')
-            ->replace(self::MINUT_START_REGEX, '<fg=red>$1</fg=red>')
+            ->replace(self::MINUS_START_REGEX, '<fg=red>$1</fg=red>')
             ->replace(self::AT_START_REGEX, '<fg=cyan>$1</fg=cyan>')
             ->value();
     }
