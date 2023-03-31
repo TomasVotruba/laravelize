@@ -27,7 +27,7 @@ use Webmozart\Assert\Assert;
  */
 final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRector
 {
-    private string $routesFilePath;
+    private readonly string $routesFilePath;
 
     public function __construct(
         private readonly BetterStandardPrinter $betterStandardPrinter,
